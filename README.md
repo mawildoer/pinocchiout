@@ -1,5 +1,7 @@
 # `pinocchiout` - STM32 Pinout Solver
 
+![screenshot](https://raw.githubusercontent.com/mawildoer/pinocchiout/refs/heads/main/screenshot.png)
+
 ## Installation
 
 I recommend using [`uv`](https://docs.astral.sh/uv/getting-started/installation/) to install this project.
