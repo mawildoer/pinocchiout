@@ -55,6 +55,8 @@ You can print out a table of the pinout like so:
 uvx pinocchiout --reqs "examples/reqs.yaml"
 ```
 
+Peripheral names ("peripheral") and signal names ("signals") are treated as regular expressions, so you can use them to match multiple.
+
 ### As a library
 
 Honestly, it could be better, but see `example.py` for a simple example of how to use it as a library.
