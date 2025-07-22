@@ -1,0 +1,35 @@
+[project]
+name = "pinocchio"
+description = "Pinout solver for STM32 microcontrollers"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.11.7",
+    "z3-solver>=4.15.1.0",
+]
+dynamic = ["version"]
+
+[build-system]
+requires = [
+    "hatchling",
+    "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pinocchio"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.4",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+select = ["ALL"]
+exclude = ["venv", "dist", "build", "*.egg-info", "*.egg", "*.pyc", "*.pyo", "*.pyd", "*.pyw", "*.pyz", "*.pywz", "*.pyzw", "*.pyz"]
