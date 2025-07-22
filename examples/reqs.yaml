@@ -7,6 +7,33 @@ requirements:
       - MOSI
       - MISO
       - SCK
+  - name: i2c
+    kind: i2c
+    signals:
+      - SCL
+      - SDA
+  - name: usb
+    kind: usb
+    signals:
+      - DM
+      - DP
+  - name: can
+    kind: can
+    signals:
+      - TX
+      - RX
+  - name: motor-pwm
+    peripheral: TIM[1|8]
+    signals:
+      - CH1
+      - CH2
+      - CH3
+  - name: current-sense
+    peripheral: ADC[1|2]
+    signals:
+      - IN[0-9]+
+      - IN[0-9]+
+      - IN[0-9]+
 
-reserved_pins:
- - PB8  # boot select pin
+reserved_pins: []
+#  - PB8  # boot select pin  # <-- this is deselected, because there's no solution with all this, USB and CAN
