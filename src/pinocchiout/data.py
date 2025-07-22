@@ -5,9 +5,9 @@ from typing import Any
 import httpx
 from pydantic import BaseModel
 
-from pinocchio.utils import find_one
+from .utils import find_one
 
-CACHE_DIR = Path.cwd() / ".pinocchio_cache" / "chip_data"
+CACHE_DIR = Path.cwd() / ".pinocchiout_cache" / "chip_data"
 
 
 class Stm32Model(BaseModel):

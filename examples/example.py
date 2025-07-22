@@ -1,5 +1,5 @@
-from pinocchio.data import get_chip_package_and_core
-from pinocchio.tableator import Tableator
+from pinocchiout.data import get_chip_package_and_core
+from pinocchiout.tableator import Tableator
 
 package, core = get_chip_package_and_core("STM32G431C6", "UFQFPN48")
 

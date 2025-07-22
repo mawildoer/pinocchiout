@@ -1,0 +1,12 @@
+{
+    "chip": "STM32G431C6",
+    "package": "UFQFPN48",
+    "requirements": [
+        {
+            "name": "position-sensor",
+            "kind": "spi",
+            "signals": ["MOSI", "MISO", "SCK"]
+        }
+    ],
+    "reserved_pins": ["PB8"]
+}

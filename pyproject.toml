@@ -1,14 +1,20 @@
 [project]
-name = "pinocchio"
-description = "Pinout solver for STM32 microcontrollers"
+name = "pinocchiout"
+description = "Pinout solver STM32 for microcontrollers"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "httpx>=0.28.1",
     "pydantic>=2.11.7",
+    "rich>=14.0.0",
+    "ruamel-yaml>=0.18.14",
+    "typer>=0.16.0",
     "z3-solver>=4.15.1.0",
 ]
 dynamic = ["version"]
+
+[project.scripts]
+pinocchiout = "pinocchiout.main:app"
 
 [build-system]
 requires = [
@@ -18,7 +24,7 @@ requires = [
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/pinocchio"]
+packages = ["src/pinocchiout"]
 
 [tool.hatch.version]
 source = "vcs"

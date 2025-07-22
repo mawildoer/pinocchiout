@@ -7,9 +7,9 @@ import rich
 import z3
 from rich.table import Table
 
-from pinocchio.data import Stm32Model
-from pinocchio.solver import PinSolver
-from pinocchio.utils import coerce_pattern, find_one
+from .data import Stm32Model
+from .solver import PinSolver
+from .utils import coerce_pattern, find_one
 
 
 class Tableator:
@@ -52,8 +52,6 @@ class Tableator:
 
     def solve(self) -> None:
         solution = self.solver.solve()
-        if solution is None:
-            raise ValueError("No solution found")
 
         table = Table("requirement", "peripheral", "signal", "pin")
         for row in self.data:

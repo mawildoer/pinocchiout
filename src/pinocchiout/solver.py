@@ -30,6 +30,9 @@ class PinSolver:
     class NoSignalError(InvalidPeripheralError):
         """Raised when a pin is not viable for a requirement."""
 
+    class NoSolutionError(Exception):
+        """Raised when no solution is found."""
+
     def __init__(self, package: Stm32Model.Package, core: Stm32Model.Core):
         self.package = package
         self.core = core
@@ -117,11 +120,11 @@ class PinSolver:
         self.solver.add(z3.Distinct(*self._peripheral_refs))
         self.solver.add(z3.Distinct(*self._pin_refs))
 
-    def solve(self) -> z3.ModelRef | None:
+    def solve(self) -> z3.ModelRef:
         """Solve the constraints and return a model if a solution is found."""
         self._force_unique_resources()
 
         if self.solver.check() != z3.sat:
-            return None
+            raise self.NoSolutionError()
 
         return self.solver.model()
