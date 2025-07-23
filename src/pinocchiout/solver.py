@@ -132,7 +132,7 @@ class PinSolver:
                 peripheral_predicates.append(z3.And(*candidate_predicates))
 
         if not peripheral_predicates:
-            raise collector.make()
+            raise collector.make_exception_group()
 
         if consume_peripheral:
             self._peripheral_refs.append(peripheral_ref)

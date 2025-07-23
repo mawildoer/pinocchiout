@@ -56,11 +56,11 @@ wheels = [
 
 [[package]]
 name = "groupie"
-version = "0.1.0"
+version = "0.2.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/80/51/9081ab242e19c99d2023701a80e4de00a33734397a50fb9d8e967099fbca/groupie-0.1.0.tar.gz", hash = "sha256:0cfb2ea35cc447aeb7d2b1f9d8cb46cb3dbdf11014dd32780a2ee0638eda69ab", size = 16663, upload-time = "2025-07-21T20:59:50.722Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/eb/73/d2cd8b4febc6cd3c6dd447dd5791f8e95eae986e684fa600a8af89c65f31/groupie-0.2.0.tar.gz", hash = "sha256:ef33d78c564d5508947124155380cf0669411f82dac648a1a715d1f0e59a5f0f", size = 16719, upload-time = "2025-07-23T19:02:57.359Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/66/7d/f3054671857f65ef92071a8b32192e65c799f49d7225b8387d85b255ba08/groupie-0.1.0-py3-none-any.whl", hash = "sha256:2749385dcfb500108da891ae22c957778cd45cf3ffffee324429731b543ebcf0", size = 6514, upload-time = "2025-07-21T20:59:49.766Z" },
+    { url = "https://files.pythonhosted.org/packages/70/50/07ecca60d39e43979d56dbd1a136056c58eb398b4acabb7936edaf94c893/groupie-0.2.0-py3-none-any.whl", hash = "sha256:a8241ee75da366d3b077ff6cb915ac265380e165ad6a54f20f9a87c01844e499", size = 6571, upload-time = "2025-07-23T19:02:56.055Z" },
 ]
 
 [[package]]
