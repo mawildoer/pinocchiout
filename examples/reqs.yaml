@@ -7,6 +7,7 @@ requirements:
       - MOSI
       - MISO
       - SCK
+    consume_peripheral: false
   - name: i2c
     kind: i2c
     signals:
@@ -35,5 +36,7 @@ requirements:
       - IN[0-9]+
       - IN[0-9]+
 
-reserved_pins: []
-#  - PB8  # boot select pin  # <-- this is deselected, because there's no solution with all this, USB and CAN
+reserved_pins:
+  # If you need "any GPIO", just match against any "P" pin name, and you can grab a spare one
+  position-sensor-cs: "P.*"  # reserve any pin (all can be GPIOs), for SPI chip select
+  boot-select: PB8  # boot select pin  # <-- this is deselected, because there's no solution with all this, USB and CAN

@@ -19,11 +19,12 @@ class _Spec(BaseModel):
         peripheral: str | None = None
         kind: str | None = None
         signals: list[str] | None = None
+        consume_peripheral: bool = True
 
     chip: str
     package: str
     requirements: list[Requirement]
-    reserved_pins: list[str] = []
+    reserved_pins: dict[str, str] = {}
 
 
 @app.command()
@@ -54,13 +55,13 @@ def main(reqs: Path | None = None, chip: str | None = None, package: str | None 
             peripheral_name=requirement.peripheral,
             peripheral_kind=requirement.kind,
             peripheral_signal_names=requirement.signals,
+            consume_peripheral=requirement.consume_peripheral,
         )
 
-    for pin in _reqs.reserved_pins:
-        tableator.reserve_pin(pin)
+    for requirement_name, pin in _reqs.reserved_pins.items():
+        tableator.reserve_pin(requirement_name, pin)
 
     tableator.solve()
-
 
 if __name__ == "__main__":
     app()

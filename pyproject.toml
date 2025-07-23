@@ -4,6 +4,7 @@ description = "Pinout solver STM32 for microcontrollers"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "groupie>=0.1.0",
     "httpx>=0.28.1",
     "pydantic>=2.11.7",
     "rich>=14.0.0",
