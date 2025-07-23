@@ -1,4 +1,4 @@
-chip: STM32G431C6
+chip: STM32G473
 package: UFQFPN48
 requirements:
   - name: position-sensor

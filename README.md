@@ -52,7 +52,17 @@ YAML is preferred, because it allows for comments, but JSON is also supported:
 You can print out a table of the pinout like so:
 
 ```bash title="Printing the pinout"
-uvx pinocchiout --reqs "examples/reqs.yaml"
+uvx pinocchiout solve --reqs "examples/reqs.yaml"
+```
+
+### Listing peripherals
+
+You can also list all available peripherals for a chip/package:
+
+```bash title="Listing peripherals"
+uvx pinocchiout list --reqs "examples/reqs.yaml"
+# or specify chip and package directly
+uvx pinocchiout list --chip STM32G431C6 --package UFQFPN48
 ```
 
 Peripheral names ("peripheral") and signal names ("signals") are treated as regular expressions, so you can use them to match multiple.
